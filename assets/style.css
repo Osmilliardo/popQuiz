@@ -6,9 +6,11 @@ ol {
     list-style: upper-alpha inside;
 }
 
-#startBtn {
+#startBtn #nextBtn1 #nextBtn2 #nextBtn3 #nextBtn4 #nextBtn5{
     display: inline;
-    border: solid black 3px;
+    background-color: navy;
+    color: beige;
+    border-radius: 30px;
 }
 
 .hidden {

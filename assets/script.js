@@ -4,17 +4,15 @@
 // var q4Card = $('#questionCard4')
 // var q5Card = $('#questionCard5')
 
-var timeLeft = 80
-var score = 100
-
-// $('.incorrect').attr("disabled", true)
+var timeLeft = 60
+var score = 0
 
 // starts the test
 $('#startBtn').on('click', function () {
     if ($('#questionCard1').hasClass('hidden')) {
-        // console.log("it is hidden")
         $('#questionCard1').removeClass('hidden')
         $('#startScreen').addClass('hidden')
+        startTimer()
     } 
 
 })
@@ -62,8 +60,11 @@ $('#nextBtn4').on('click', function () {
 
 // last button takes user to screen to enter initials
 $('#nextBtn5').on('click', function () {
+
     $('.incorrect').attr("disabled", false)
     $('#finalScore').text('Your final score is ' + score)
+    $('#answerCondition').text('')
+    timeLeft = 0
 
     if (!$('#questionCard5').hasClass('hidden') && 
          $('#testComplete').hasClass('hidden'))  {
@@ -72,16 +73,33 @@ $('#nextBtn5').on('click', function () {
     }
 })
 
+// what happens when click the incorrect answer
 $('.incorrect').on('click', function () {
     $('.incorrect').attr('disabled', true)
     $('#answerCondition').text('That is incorrect')
-    score -= 20,
-    timer -= 10
+    timeLeft -= 10
 })
 
+// what happens when you click the correct answer
 $('.correct').on('click', function () {
     $('.incorrect').attr('disabled', true)
     $('#answerCondition').text("That is correct!")
+    score += 20
 })
 
-// setInterval(function)
+// timer function
+function startTimer() {
+setInterval(function () {
+    if (timeLeft > 0) {
+    timeLeft --;
+    }
+    $('#timer').text(timeLeft + ' seconds remaining!')
+
+    if (timeLeft === 0) {
+        $('.testCards').addClass('hidden')
+        $('#finalScore').text('Your final score is ' + score)
+        $('#answerCondition').text('')
+        $('#testComplete').removeClass('hidden')
+        $('#timer').text('')
+    }
+}, 1000)}
