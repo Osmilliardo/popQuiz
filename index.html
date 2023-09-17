@@ -22,70 +22,72 @@
         <section class="testCards">
             <div id="questionCard1" class="hidden">this is eventually question number 1
                 <ol class="answerList">
-                    <li class="incorrect">A</li>
-                    <li class="correct">B</li> <!--Correct-->
-                    <li class="incorrect">C</li>
-                    <li class="incorrect">D</li>
+                    <li><button class="incorrect">A</button></li>
+                    <li><button class="correct">B</button></li> <!--Correct-->
+                    <li><button class="incorrect">C</button></li>
+                    <li><button class="incorrect">D</button></li>
                 </ol>
-                <button id="nextBtn">Next</button>
+                <button id="nextBtn1">Next</button>
             </div>
         </section>
 
         <section class="testCards">
             <div class="hidden" id="questionCard2">this is eventually question number 2
                 <ol class="answerList">
-                    <li class="incorrect">A</li>
-                    <li class="incorrect">B</li>
-                    <li class="incorrect">C</li>
-                    <li class="correct">D</li> <!--Correct-->
+                    <li><button class="incorrect">A</button></li>
+                    <li><button class="incorrect">B</button></li>
+                    <li><button class="incorrect">C</button></li>
+                    <li><button class="correct">D</button></li> <!--Correct-->
                 </ol>
-                <button id="nextBtn">Next</button>
+                <button id="nextBtn2">Next</button>
             </div>
         </section>
 
         <section class="testCards">
             <div class="hidden" id="questionCard3">this is eventually question number 3
                 <ol class="answerList">
-                    <li class="correct">A</li> <!--Correct-->
-                    <li class="incorrect">B</li>
-                    <li class="incorrect">C</li>
-                    <li class="incorrect">D</li>
+                    <li><button class="correct">A</button></li> <!--Correct-->
+                    <li><button class="incorrect">B</button></li>
+                    <li><button class="incorrect">C</button></li>
+                    <li><button class="incorrect">D</button></li>
                 </ol>
-                <button id="nextBtn">Next</button>
+                <button id="nextBtn3">Next</button>
             </div>
         </section>
 
         <section class="testCards">
             <div class="hidden" id="questionCard4">this is eventually question number 4
                 <ol class="answerList">
-                    <li class="incorrect">A</li>
-                    <li class="incorrect">B</li>
-                    <li class="correct">C</li> <!--Correct-->
-                    <li class="incorrect">D</li>
+                    <li><button class="incorrect">A</button></li>
+                    <li><button class="incorrect">B</button></li>
+                    <li><button class="correct">C</button></li> <!--Correct-->
+                    <li><button class="incorrect">D</button></li>
                 </ol>
-                <button id="nextBtn">Next</button>
+                <button id="nextBtn4">Next</button>
             </div>
         </section>
 
         <section class="testCards">
             <div class="hidden" id="questionCard5">this is eventually question number 5
                 <ol id="answerList">
-                    <li id="answerA">A</li> <!--Correct-->
-                    <li class="incorrect">B</li> 
-                    <li class="incorrect">C</li>
-                    <li class="incorrect">D</li>
+                    <li><button class="correct">A</button></li> <!--Correct-->
+                    <li><button class="incorrect">B</button></li>
+                    <li><button class="incorrect">C</button></li>
+                    <li><button class="incorrect">D</button></li>
                 </ol>
-                <button id="nextBtn">Next</button>
+                <button id="nextBtn5">Next</button>
             </div>
         </section>
 
         <section class="testOver">
-            <div id="testComplete"></div>
-            <form action="#highScoreTable">
-                <label for="initials">Enter Your initials</label>
-                <input type="text" id="initials" name="initials">
-                <input type="submit" value="Submit">
-            </form>
+            <div id="testComplete" class="hidden">
+                <span id="finalScore"></span>
+                <form action="#highScoreTable">
+                    <label for="initials">Enter Your initials</label>
+                    <input type="text" id="initials" name="initials">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </section>
 
         <section class="highScoreTable">
@@ -100,4 +102,4 @@
 </body>
 </html>
 
-<!-- <div id="answerCondition">Is the answer correct or not</div> -->
+<div id="answerCondition"></div>
