@@ -9,8 +9,15 @@ var score = 100
 
 $('#startBtn').on('click', function () {
     if ($('#questionCard1').hasClass('hidden')) {
-        console.log("it is hidden")
-        
-    } else console.log('something broke')
+        // console.log("it is hidden")
+        $('#questionCard1').removeClass('hidden')
+        $('#startScreen').addClass('hidden')
+    } 
 
+})
+
+$('#nextBtn').on('click', function () {
+    if (!$('#questionCard1').hasClass('hidden')) {
+        console.log('it is not hidden')
+    }
 })
