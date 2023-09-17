@@ -5,3 +5,20 @@ body {
 ol {
     list-style: upper-alpha inside;
 }
+
+.testOver {
+    display: none;
+}
+
+#startBtn {
+    display: inline;
+    border: solid black 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+.notHidden {
+    display: inline-block;
+}
