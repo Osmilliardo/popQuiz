@@ -105,14 +105,17 @@ setInterval(function () {
 }, 1000)}
 
 // submits users initials to the scoreboard
-
-
 function handleFormSubmit(event) {
     event.preventDefault()
-    var initials = $('input[name="initials"]')
+    var initials = $('input[name="initials"]').val();
     console.log(initials)
-    $('#scoreTable').append('<li>' + initials + ' : ' + score + '</li>')
+    var li = $('<li>')
+    li.text(initials + ' : ' + score)
+    $('#scoreTable').append(li)
+    // $('#scoreTable').append('<li>' initials + ' : ' + score + '</li>')
 }
+
+$('#submit').on('click', handleFormSubmit)
 
 // opens the scoreboard
 $('#highScore').on('click', function () {
