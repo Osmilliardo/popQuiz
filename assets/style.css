@@ -17,3 +17,14 @@ ol {
     display: none;
 }
 
+#highScore {
+    position: relative;
+    right: 45%;
+    margin: 8px;
+}
+
+#timer {
+    position: relative;
+    left: 43%;
+    margin: 8px;
+}

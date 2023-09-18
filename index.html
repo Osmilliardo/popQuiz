@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="headEL" id="highScore">high score</div>
+        <div><button class="headEL" id="highScore">High Score</button></div>
         <div class="headEL" id="timer"></div>
     </header>
     <main>
@@ -23,7 +23,7 @@
             <div id="questionCard1" class="hidden">this is eventually question number 1
                 <ol class="answerList">
                     <li><button class="incorrect">A</button></li>
-                    <li><button class="correct">B</button></li> <!--Correct-->
+                    <li><button class="correct">B this is correct</button></li> <!--Correct-->
                     <li><button class="incorrect">C</button></li>
                     <li><button class="incorrect">D</button></li>
                 </ol>
@@ -37,7 +37,7 @@
                     <li><button class="incorrect">A</button></li>
                     <li><button class="incorrect">B</button></li>
                     <li><button class="incorrect">C</button></li>
-                    <li><button class="correct">D</button></li> <!--Correct-->
+                    <li><button class="correct">D this is correct</button></li> <!--Correct-->
                 </ol>
                 <button id="nextBtn2">Next</button>
             </div>
@@ -46,7 +46,7 @@
         <section class="testCards">
             <div class="hidden" id="questionCard3">this is eventually question number 3
                 <ol class="answerList">
-                    <li><button class="correct">A</button></li> <!--Correct-->
+                    <li><button class="correct">A this is correct</button></li> <!--Correct-->
                     <li><button class="incorrect">B</button></li>
                     <li><button class="incorrect">C</button></li>
                     <li><button class="incorrect">D</button></li>
@@ -60,7 +60,7 @@
                 <ol class="answerList">
                     <li><button class="incorrect">A</button></li>
                     <li><button class="incorrect">B</button></li>
-                    <li><button class="correct">C</button></li> <!--Correct-->
+                    <li><button class="correct">C this is correct</button></li> <!--Correct-->
                     <li><button class="incorrect">D</button></li>
                 </ol>
                 <button id="nextBtn4">Next</button>
@@ -70,7 +70,7 @@
         <section class="testCards">
             <div class="hidden" id="questionCard5">this is eventually question number 5
                 <ol id="answerList">
-                    <li><button class="correct">A</button></li> <!--Correct-->
+                    <li><button class="correct">A this is correct</button></li> <!--Correct-->
                     <li><button class="incorrect">B</button></li>
                     <li><button class="incorrect">C</button></li>
                     <li><button class="incorrect">D</button></li>
@@ -82,18 +82,18 @@
         <section class="testOver">
             <div id="testComplete" class="hidden">
                 <span id="finalScore"></span>
-                <form action="#highScoreTable">
-                    <label for="initials">Enter Your initials</label>
-                    <input type="text" id="initials" name="initials">
-                    <input type="submit" value="Submit">
+                <form action="#scoreTable" method="get">
+                    <input type="text" id="initials" name="initials" placeholder="Enter Your Initials"/>
+                    <input type="submit" value="Submit"/>
                 </form>
             </div>
         </section>
 
-        <section class="highScoreTable">
-            <ol id="scoreTable">
-
-            </ol>
+        <section class="highScoreTable hidden">
+            <h2>High Scores</h2>
+            <ul id="scoreTable"></ul>
+            <span><button type="reset">Reset</button></span>
+            <span><button id="return">Return</button></span>
         </section>
     </main>
 

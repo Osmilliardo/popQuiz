@@ -103,3 +103,27 @@ setInterval(function () {
         $('#timer').text('')
     }
 }, 1000)}
+
+// submits users initials to the scoreboard
+// function handleFormSubmit(event) {
+//     event.preventDefault()
+//     var initials = $('input[name="initials"]').val()
+//     console.log(initials)
+//     $('#scoreTable').append('<li>' + initials + ' : ' + score + '</li>')
+// }
+
+// opens the scoreboard
+$('#highScore').on('click', function () {
+    $('#startScreen').addClass('hidden')
+    $('.testCards').addClass('hidden')
+    $('.testOver').addClass('hidden')
+    $('.highScoreTable').removeClass('hidden')
+})
+
+// returns to start screen
+$('#return').on('click', function () {
+    $('#startScreen').removeClass('hidden')
+    $('.testCards').removeClass('hidden')
+    $('.testOver').removeClass('hidden')
+    $('.highScoreTable').addClass('hidden')
+})
