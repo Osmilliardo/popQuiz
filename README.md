@@ -19,3 +19,10 @@ I probably took a lazy/easy way out about the different questions and registerin
 
 The bigger things that I really learned on this project was a lot about forms, and how I don't know how they work really, and I got a better understanding on jQuery syntax.
 
+https://github.com/Osmilliardo/popQuiz
+https://osmilliardo.github.io/popQuiz/
+
+![Alt text](./assets/pq1.png)
+![Alt text](./assets/pq2.png)
+![Alt text](./assets/pq3.png)
+![Alt text](./assets/pq4.png)
